@@ -1,0 +1,22 @@
+.logo{
+  max-width: 168px;
+}
+
+.menu{
+  width: 100%;
+  padding: 60px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  padding: 10px 5%;
+
+  background-color: var(--black);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 1px 13px 3px var(--primary);
+}
