@@ -1,14 +1,8 @@
-.logo{
-  max-width: 168px;
-}
+import styled from 'styled-components';
 
-@media (max-width: 800px) {
-  .logo {
-    max-width: 105px;
-  }
-}
+import Button from "../button";
 
-.menu{
+export const Menu = styled.nav`
   width: 100%;
   padding: 10px 5%;
 
@@ -23,20 +17,21 @@
 
   background-color: var(--black);
   border-bottom: 3px solid var(--primary);
-  box-shadow: 0 1px 13px 3px var(--primary);
-}
+  box-shadow: 0 1px 13px 3px var(--primary);  
 
-@media (max-width: 800px) {
-  .menu {
+  @media (max-width: 800px) {
     justify-content: center;
   }
-  body {
-    --bodyPaddingTop: 40px;
-    padding-top: var(--bodyPaddingTop);
-  }
-}
+`;
 
-.buttonLink{
+export const Logo = styled.img`
+  max-width: 168px;
+  @media (max-width: 800px){
+    max-width: 105px;
+  }
+`;
+
+export const ButtonLink = styled(Button)`
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -46,15 +41,12 @@
   border-radius: 3px;
 
   padding: 7px 20px;
-}
-.buttonLink:hover,
-.buttonLink:focus{
-  opacity: .7;
-  transition: opacity 200ms;
-}
-
-@media(max-width: 850px){
-  a.buttonLink {
+  &:hover,
+  &:focus{
+    opacity: .7;
+    transition: opacity 200ms;
+  }
+  @media (max-width: 850px){
     position: fixed;
     left:0;
     right: 0;
@@ -64,4 +56,4 @@
     border:0;
     text-align: center;
   }
-}
+`;

@@ -1,14 +1,18 @@
 import logo from '../../assets/img/logo.png';
-import style from './style.module.css';
+import {ButtonLink, Logo, Menu as MenuWrapper} from './style';
 
 const Menu = () =>{
 
   return(
-    <nav className={style.menu}>
+    <MenuWrapper>
       <a href="">
-        <img className={style.logo} src={logo} alt="logo-dev-flix"/>
+        <Logo src={logo} alt="logo-dev-flix"/>
       </a>
-    </nav>
+
+      <ButtonLink as='a' href='/'>
+        Novo Vídeo
+      </ButtonLink>
+    </MenuWrapper>
   )
 }
 
