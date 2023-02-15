@@ -1,5 +1,5 @@
 import logo from '../../assets/img/logo.png';
-import {ButtonLink, Logo, Menu as MenuWrapper} from './style';
+import {ButtonLink, Logo, Menu as MenuWrapper} from './menu.style';
 
 const Menu = () =>{
 
