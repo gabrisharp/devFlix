@@ -1,5 +1,13 @@
 import axios from 'axios';
 import iMovie from './types/movie';
+import iMovieGroup from './types/movieCategory';
+
+// interface iResult{
+//   page:number,
+//   result: iMovie[],
+//   total_pages: number,
+//   total_results: number
+// }
 
 const ID_NETFLIX = 213; //network id to netflix
 const ID_ACTION = 28;
@@ -8,11 +16,6 @@ const ID_TERROR = 27;
 const ID_ROMANCE = 10749;
 const ID_DOCUMENTARY = 99;
 
-console.log({
-  baseURL: import.meta.env.VITE_API_BASE,
-  key: import.meta.env.VITE_API_KEY
-})
-
 const Axios = axios.create({
   baseURL: import.meta.env.VITE_API_BASE,
   headers:{
@@ -20,7 +23,7 @@ const Axios = axios.create({
   }
 })
 
-async function basicRequest (endpoint: string): Promise<iMovie>{
+async function basicRequest (endpoint: string): Promise<{result:iMovie[]}>{
   let response = await Axios.get(`${endpoint}`,{
     params:{
       language:'pt-BR'
@@ -30,7 +33,7 @@ async function basicRequest (endpoint: string): Promise<iMovie>{
 }
 
 export default {
-  getHomeList: async () =>{
+  getHomeList: async ():Promise<iMovieGroup[]> =>{
     return [
       {
         slug: 'netflix originals',

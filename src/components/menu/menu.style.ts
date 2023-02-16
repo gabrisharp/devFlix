@@ -10,10 +10,10 @@ export const Menu = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  position: fixed;
+  /* position: fixed;
   top:0;
   left:0;
-  right: 0;
+  right: 0; */
 
   background-color: var(--black);
   border-bottom: 3px solid var(--primary);

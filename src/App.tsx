@@ -1,23 +1,33 @@
-import Menu from './components/menu';
-import {useEffect, useState} from 'react';
-import Tmdb from './api';
 import './App.css'
+import Tmdb from './api';
+import {useEffect, useState} from 'react';
+import iMovieCategory from './types/movieCategory';
+
+import Menu from './components/menu';
+import Carousel from './components/Carousel';
 
 function App() {
 
+  const [movieList, setMovieList] = useState<iMovieCategory[]>([])
+
   useEffect(()=>{
     (async function(){
-      console.log('rodando...')
       //geting list
       const list = await Tmdb.getHomeList();
-      console.log(list);
+      setMovieList(list);
     })();
   },[])
 
   return (
     <div className="App">
       <Menu />
-
+      {/* Banner */}
+      {/* Lists */
+        movieList.map((group, index)=>(
+          <Carousel key={index} category={group}/>
+        ))
+      }
+      {/* Footer */}
     </div>
   )
 }
