@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Button from "../button";
+import Button from "../Button";
 
 export const Menu = styled.nav`
   width: 100%;

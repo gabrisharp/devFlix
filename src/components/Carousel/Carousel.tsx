@@ -7,7 +7,6 @@ interface Prop{
 }
 
 const Carousel = ({category}: Prop) =>{
-  console.log(category);
   const movies = category.items.results;
   const urlPath = 'http://image.tmdb.org/t/p/w300';
 
