@@ -6,5 +6,7 @@ export default interface iTvInfo{
   title: string,
   number_of_seasons: number,
   name: string,
-  
+  original_name: string,
+  backdrop_path: string,
+  vote_avarage: number,
 }

@@ -46,7 +46,7 @@ export default {
       {
         slug: 'trending',
         title: 'Recomendados para Você',
-        items: await basicRequest('/trending/all/week')
+        items: await basicRequest('/trending/tv/week')
       },
       {
         slug: 'top rated',

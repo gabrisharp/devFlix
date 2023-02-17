@@ -22,8 +22,8 @@ function App() {
       setMovieList(list);
 
       //Filme em Banner
-      let originals = list.filter( i => i.slug === 'netflix originals');
-      let randomMovie = randonChosen(originals[0]);
+      let collection = list.filter( i => i.slug === 'trending');
+      let randomMovie = randonChosen(collection[0]);
       let bannerInfo = await Tmdb.getMovieInfo(randomMovie.id, `tv`);
       setBannerData(bannerInfo);
     })();
