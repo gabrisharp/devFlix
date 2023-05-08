@@ -13,4 +13,11 @@ export const FooterBase = styled.footer`
   @media (max-width: 800px) {
     margin-bottom: 50px;
   }
+
+  p {
+    margin-bottom: 20px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 `;

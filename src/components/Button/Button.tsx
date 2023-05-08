@@ -1,19 +1,22 @@
 import { ReactNode } from "react";
-// import style from './button.module.css'; currently comes from the father
+import {Button as StyleButton} from './button.style';
 
 interface Props{
   children: ReactNode,
   href?: string,
   handleClick?: () => void,
-  class: string,
+
+  background?: string,
+  color?: string,
 }
 
 const Button: React.FC<Props> = (Props) =>{
   
   return(
-    <a className={Props.class} href={Props.href} onClick={Props.handleClick}>
+    <StyleButton onClick={Props.handleClick} href={Props.href} 
+    background={Props.background} color={Props.color}>
       {Props.children}
-    </a>
+    </StyleButton>
   )
 }
 

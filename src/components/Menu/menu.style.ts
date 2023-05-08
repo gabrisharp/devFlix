@@ -2,22 +2,36 @@ import styled from 'styled-components';
 
 import Button from "../Button";
 
-export const Menu = styled.nav`
+interface MenuProps {
+  isScrooled?: boolean
+}
+
+export const Menu = styled.nav<MenuProps>`
   width: 100%;
   padding: 10px 5%;
+  max-height: 80px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  /* position: fixed;
-  top:0;
-  left:0;
-  right: 0; */
+  position: fixed;
+  inset: 0; //instead of top,left... 
+  z-index: 999;
 
-  background-color: var(--black);
-  border-bottom: 3px solid var(--primary);
-  box-shadow: 0 1px 13px 3px var(--primary);  
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+
+  transition: all 0.5s ease-in-out;
+
+  ${props => props.isScrooled && `
+    background-color: var(--grayDark);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0 1px 13px 3px var(--primary);
+    max-height: 70px; 
+    transition: box-shadow 0.5s ease-in;
+    transition: max-height 0.5s ease-in-out;
+  `}
 
   @media (max-width: 800px) {
     justify-content: center;
@@ -55,5 +69,14 @@ export const ButtonLink = styled(Button)`
     border-radius: 0;
     border:0;
     text-align: center;
+  }
+
+`;
+
+export const UserButton = styled.img`
+  max-width: 50px;
+  border-radius: 3px;
+  @media (max-width: 800px){
+    max-width: 40px;
   }
 `;

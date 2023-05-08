@@ -1,4 +1,8 @@
-body{
+body {
   background-color: var(--grayDark);
   color: var(--white);
+}
+
+.movie-list {
+  margin-top: -150px;
 }
