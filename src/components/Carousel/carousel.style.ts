@@ -16,6 +16,9 @@ export const MovieGroupContainer = styled.div`
   h2{
     margin-left: 30px;
   }
+  #hidden {
+    display: none;
+  }
 
   .listWrapper {
     display: flex;
@@ -49,8 +52,17 @@ export const MovieGroupContainer = styled.div`
     opacity: 1;
   }
 
-  Card{
-    width: 100px;
+  @media (max-width: 820px) {
+    .movieRow--left, .movieRow--right{
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .movieRow--right,
+   .movieRow--left{
+    height: 180px;
+   }
   }
 `;
 

@@ -32,6 +32,14 @@ export const BannerArea = styled.section<image>`
     display: flex;
     justify-content: space-between;
   }
+  @media (max-width: 760px){
+    height: 90vh;
+    font-size: 14px;
+    background-position: center;
+    .buttonsContainer{
+      width: 275px;
+    }
+  }
 `;
 
 export const BannerInfo = styled.div`
@@ -42,11 +50,18 @@ export const BannerInfo = styled.div`
   padding-left: 5%;
   padding-bottom: 150px;
   padding-top: 70px;
+  @media (max-width: 760px){
+    padding-right: 5%;
+  }
 `;
 
 export const BannerTitle = styled.h2`
   font-size: 60pt;
   font-weight: 700;
+
+  @media (max-width: 760px){
+    font-size: 35pt;
+  }
 `;
 
 export const BannerDetails = styled.div`
@@ -56,6 +71,9 @@ export const BannerDetails = styled.div`
   font-weight: 700;
   line-height: 20px;
   margin-bottom: 20px;
+  @media (max-width: 760px){
+    font-size: 16px;
+  }
 `;
 export const BannerPoints = styled.div`
   color: #4caf73;
@@ -72,6 +90,12 @@ export const BannerDescription = styled.div`
   max-width: 600px;
   line-height: 25px;
   color: #cfcfcf;
+  @media (max-width: 760px){
+    max-width: 100%;
+    margin-right: 30px;
+    background-color: #0003;
+    color: #dfdfdf;
+  }
 `;
 
 export const BannerGenres = styled.div`

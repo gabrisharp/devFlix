@@ -23,7 +23,7 @@ const Menu = () => {
 
   return (
     <MenuWrapper isScrooled={isScrolled} >
-      <a href="">
+      <a id="logo" href="">
         <Logo src={logo} alt="logo-dev-flix" />
       </a>
 
@@ -33,7 +33,7 @@ const Menu = () => {
       </ButtonLink>      
       */}
 
-      <a href="">
+      <a id="userIcon" href="">
         <UserButton src={userIcon} alt="user" />
       </a>
 

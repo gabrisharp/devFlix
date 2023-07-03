@@ -32,9 +32,12 @@ export const Menu = styled.nav<MenuProps>`
     
     
   `}
+  
 
   @media (max-width: 800px) {
-    justify-content: center;
+    #logo{
+    margin: 0 auto;
+  }    
   }
 `;
 

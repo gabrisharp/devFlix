@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface Props{
+interface Props {
   background?: string,
   color?: string,
 }
@@ -21,8 +21,12 @@ export const Button = styled.a<Props>`
   opacity: .7;
   transition: opacity 200ms;
   }
-  @media(max-width: 850px){
-    a.buttonLink {
+  @media(max-width: 760px){
+    font-size: 14pt;
+    padding: 5px 15px;
+
+
+    /* a.buttonLink {
       position: fixed;
       left:0;
       right: 0;
@@ -31,6 +35,6 @@ export const Button = styled.a<Props>`
       border-radius: 0;
       border:0;
       text-align: center;
-    }
+    } */
 }
 `

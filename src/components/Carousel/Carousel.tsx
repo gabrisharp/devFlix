@@ -11,8 +11,8 @@ interface Prop {
 const Carousel = ({ category }: Prop) => {
   const movies = category.items.results;
   const urlPath = 'http://image.tmdb.org/t/p/w300';
-  const CARD_SIZE = 200; //em pixeis
 
+  const [cardSize, setCardSize] = useState<number>(window.innerWidth > 760 ? 200 : 150)
   const [listOffSet, setListOffSet] = useState<number>(0);
 
   const handleLeftArrow = () => {
@@ -25,7 +25,7 @@ const Carousel = ({ category }: Prop) => {
 
   const handleRightArrow = () => {
     let offset = Math.round(window.innerWidth / 2);
-    let listWidth = movies.length * CARD_SIZE;
+    let listWidth = movies.length * cardSize;
 
     let scrollX = listOffSet - offset;
     if ((window.innerWidth - listWidth) > scrollX) {
@@ -49,10 +49,10 @@ const Carousel = ({ category }: Prop) => {
         </div>
 
         <CardListArea>
-          <CardList scrollX={listOffSet} amount={movies.length} cardSize={CARD_SIZE}>
+          <CardList scrollX={listOffSet} amount={movies.length} cardSize={cardSize}>
 
             {movies.length > 0 && movies.map((item, key) => (
-              <Card key={key} cardSize={CARD_SIZE} >
+              <Card key={key} cardSize={cardSize} >
                 <img src={`${urlPath}${item.poster_path}`} alt={`Filme: ${item.title}`} />
               </Card>
             ))}
