@@ -10,6 +10,9 @@ import Menu from './components/Menu';
 import iMovie from './types/movie';
 import iTvInfo from './types/tvInfo';
 
+//loading
+import imgLoading from './assets/img/Netflix-loading.gif';
+
 function App() {
 
   const [movieList, setMovieList] = useState<iMovieCategory[]>([])
@@ -48,6 +51,11 @@ function App() {
       </div>
       {/* Footer */}
       <Footer />
+      {movieList.length <= 0 &&
+        <div className="loading">
+          <img src={imgLoading} alt="loading" />
+        </div>
+      }
     </div>
   )
 }

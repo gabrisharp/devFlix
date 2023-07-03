@@ -23,14 +23,14 @@ export const Menu = styled.nav<MenuProps>`
   background-color: transparent;
 
   transition: all 0.5s ease-in-out;
-
+  
   ${props => props.isScrooled && `
     background-color: var(--grayDark);
     border-bottom: 3px solid var(--primary);
     box-shadow: 0 1px 13px 3px var(--primary);
     max-height: 70px; 
-    transition: box-shadow 0.5s ease-in;
-    transition: max-height 0.5s ease-in-out;
+    
+    
   `}
 
   @media (max-width: 800px) {
